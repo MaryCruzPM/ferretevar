@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="l10n_mx_edi_report_invoice_document_mx" inherit_id="account.report_invoice_document">				
+		<xpath expr="//p[@t-if='o.payment_term_id']" position="before">
+			
+			<p t-if="o.x_nota">
+				<td><strong>Observaciones</strong></td>
+	            <span t-field="o.x_nota"/>
+	            <br></br>	            
+	        </p>
+	        <br></br>
+		</xpath> 
+
+	</template>
+</odoo>

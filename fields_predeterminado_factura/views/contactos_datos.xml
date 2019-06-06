@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>        
+        <record id="AddCampos_Contactos" model="ir.ui.view">
+            <field name="name">AddCampos.Contactos.view</field>
+            <field name="model">res.partner</field>           
+            <field name="arch" type="xml"> 
+                    
+                <xpath expr="//field[@name='category_id']" position="after">    
+                    
+                        <field name="Banco_asociado"/>
+                        <field name="Metodo_pago"/>
+                        <field name="Transferenciaelectronica_Uso"/>                        
+                                
+                </xpath>
+
+            </field>
+        </record>                    
+        
+    </data>
+</odoo>
+
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="account_vista">
+			<field name="name">account_invoice_vista</field>
+			<field name="model">account.invoice</field>
+			<field name="inherit_id" ref="account.invoice_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="///group[@class='oe_subtotal_footer oe_right']" position="before">	
+					<group>					
+						<field name="seleccionDescuento" string="Retención 5 al Millar 0.5%"/>							
+					</group>				
+				</xpath>
+				<xpath expr="//group[@class='oe_subtotal_footer oe_right']//field[@name='amount_tax']" position="before">	
+						<field name="cantmillar" string="Retención 5 al Millar 0.5%"/>			
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

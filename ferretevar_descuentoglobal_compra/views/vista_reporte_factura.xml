@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model='ir.ui.view' id='vista_descuento_global'>
+			<field name='name'>vista.descuento.global</field>
+			<field name="model">purchase.order</field>
+			<field name="inherit_id" ref="purchase.purchase_order_form"/>
+		    <field name="arch" type="xml">		    	
+	            <xpath expr="//group[@class='oe_subtotal_footer oe_right']" position="before">   
+<!--	            <xpath expr="//field[@name='notes']" position="before">		-->	
+						
+	     	            <group class="oe_left">       	
+						<!-- <field name="x_aplica_descuento" string="Aplica descuento"/> -->
+							<field  class="oe_subtotal_footer oe_left" name="x_seleccion" string="Tipo de descuento"/>
+							<field name="x_cantidadPorcentaje" string="Cantidad a descontar"/>		
+							<button string="Aplicar descuento" type="object" name="generate_descuento" class="oe_highlight"/>				
+						</group>
+						<div>
+						</div>		
+					
+					
+	            </xpath>
+	            <xpath expr="//field[@name='amount_untaxed']" position="before">
+					<field name="x_subtotal" string="Subtotal sin IVA antes del descuento"/>
+					<field name="x_cantDescuento" string="Descuento"/>					
+	            </xpath>
+		    </field>
+		</record>
+
+	</data>
+</odoo>
+

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>        
+        <record id="AddCampos_factura" model="ir.ui.view">
+            <field name="name">AddCampos.Factura.view</field>
+            <field name="model">account.invoice</field>           
+            <field name="arch" type="xml"> 
+                  <tree>
+                    <field name="Banco_asociado"/>
+                    <field name="Metodo_pago"/>
+                    <field name="Transferenciaelectronica_Uso"/>
+                        
+                     </tree>
+            </field>
+        </record>
+                
+        <record id="listado_Marca_action_window" model="ir.actions.act_window">
+            <field name="name">listado.Marca.action.window</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.brand</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="AddCampos_factura"></field>
+        </record>
+
+<!--    solo en caso de que vaya en icono en la pagina princial
+
+             <menuitem
+            id="Listado_Marca_modelo"
+            name="Training Module"
+            sequence="50"
+            /> -->
+        
+        <menuitem
+            id="listado_Marca_menuitem"
+            name="Marca"
+            action="listado_Marca_action_window"   
+            parent="stock.menu_stock_config_settings"         
+            sequence="102"
+
+        />
+        
+        
+    </data>
+</odoo>
+
+
+
+      
+                
+ 
