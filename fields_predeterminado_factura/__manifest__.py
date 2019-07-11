@@ -31,7 +31,7 @@
 
     # always loaded
 	'data': [#'views/fabricacion_editableDview.xml',
-                'views/contactos_datos.xml',
+              'views/contactos_datos.xml',
     
     ],
 	'demo':[
