@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="report_invoice_layouted_quitarduplicado" inherit_id="sale.report_invoice_layouted">				
+		<xpath expr="//t[@name='lines_layouted']//table" position="replace">
+			
+			
+		</xpath> 
+
+	</template>
+</odoo>
+
+
